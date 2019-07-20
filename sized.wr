@@ -1,0 +1,7 @@
+
+pub trait Sized<type T> = void
+
+impl<meta T> Sized<T> {
+    pub fn size: T = {val self} -- 
+}
+

@@ -1,0 +1,13 @@
+/// The Size component, to be used in collections with a cetain number of elements.
+/// not to be confused with the MemSized trait, which is to be implemented on metas with a known amount of memory.
+
+use sized
+
+pub struct Size
+impl Size:
+    pub fn size: uint = {val self} -> self
+    fn setSize {var self, val ns: uint} -> self = ns
+
+impl Sized<uint> for Size {
+    fn size = Size::size 
+}
