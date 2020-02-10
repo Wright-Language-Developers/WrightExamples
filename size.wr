@@ -8,6 +8,6 @@ impl Size:
     pub fn size: uint = {val self} -> self
     fn setSize {var self, val ns: uint} -> self = ns
 
-impl Sized<uint> for Size {
+impl Sized<unsigned> for Size {
     fn size = Size::size 
 }

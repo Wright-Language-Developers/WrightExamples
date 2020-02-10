@@ -1,4 +1,8 @@
-# Recursively computes fibonacci numbers
-def fibonacci(val n: unsigned) -> unsigned:
-    if n == 0 or n == 1 then 1
+// Recursively computes fibonacci numbers.
+
+import wright::prelude::*
+
+fn fibonacci(n: u32) -> u32 {
+    if n == 0 || n == 1 then 1
     else fibonacci(n-1) + fibonacci(n-2)
+}

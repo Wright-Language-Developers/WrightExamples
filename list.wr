@@ -1,17 +1,27 @@
 #?! Wright Linked list implementation.
 
-use std.prelude.option.Option
+use std.prelude.Optional
+use std.iterator.Iterator
 
-pub type Node<type T> = Option<NodeClass<T>>
+class LinkedListNode<type T> {
+	var prev:  Optional<LinkedListNode<T>>,
+	var inner: T,
+	var next:  Optional<LinkedListNode<T>>,
+}
 
-pub class NodeClass<type T>:
-    var left: Node<T>,
-    var inner: T,
-    var right: Node<T>
+pub class LinkedList<type T> {
+	var first: Optional<LinkedListNode<T>>,
+	var last:  Optional<LinkedListNode<T>>,
+	mut size:  unsigned 
+}
 
-impl<type T> NodeClass<T>:
-    pub inline fn get_inner(val self) -> T: self.inner
-    pub fn has_right(val self) -> boolean:
-        self.right.is_some()
-    pub fn has_left(val self) -> boolean:
-        self.left.is_some()
+pub class LinkedListIterator<type T> {
+	mut inner: Optional<LinkedListNode<T>>,
+	mut index: unsigned
+}
+
+impl<type T> Constructor for LinkedList<T> {
+	fn new(self) -> Self {
+		self.
+	} 
+}

@@ -1,0 +1,22 @@
+
+
+
+pub class Vec<T> {
+    size: u64,
+    cap: u64,
+    buff: unsized<T>
+}
+
+derive<T> Any for Vec<T>
+
+derive<T> Clone for Vec<T> where T: Clone
+
+derive<T> Debug for Vec<T> where T: Debug
+
+impl<T> Vec<T> {
+    /// Construct new 
+    pub fn empty() -> Self {
+        Self {size: 0, cap: 0, buff: unsized<T>::empty()}
+    }
+
+}

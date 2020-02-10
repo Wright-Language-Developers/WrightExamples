@@ -1,4 +1,6 @@
 # prints "Hello, World"
-use wright.prelude.*
-def main :: void -> void
-def main: println("Hello World")
+import wright::prelude::*
+
+fn main() {
+	println("Hello World")
+}
