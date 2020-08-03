@@ -1,3 +1,7 @@
 // comment 
 
 struct A {}
+
+class B {}
+
+repr Option<NotNull<T>> as Nullable<t>;

@@ -3,24 +3,24 @@
 use std.prelude.Optional
 use std.iterator.Iterator
 
-class LinkedListNode<type T> {
+class LinkedListNode<T> {
 	var prev:  Optional<LinkedListNode<T>>,
 	var inner: T,
 	var next:  Optional<LinkedListNode<T>>,
 }
 
-pub class LinkedList<type T> {
+pub class LinkedList<T> {
 	var first: Optional<LinkedListNode<T>>,
 	var last:  Optional<LinkedListNode<T>>,
 	mut size:  unsigned 
 }
 
-pub class LinkedListIterator<type T> {
+pub class LinkedListIterator<T> {
 	mut inner: Optional<LinkedListNode<T>>,
 	mut index: unsigned
 }
 
-impl<type T> Constructor for LinkedList<T> {
+impl<T> Constructor for LinkedList<T> {
 	fn new(self) -> Self {
 		self.
 	} 

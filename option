@@ -1,0 +1,23 @@
+type Option<T>: Clone + {
+  fn some(move item: T) -> Self;
+  fn none() -> Self;
+  fn is_some(ref self) -> bool;
+};
+
+repr Option<T> as OptionUnion<T>;
+
+union OptionUnion<T> {
+  Some: T,
+  None: void
+}
+
+impl<T> Option<T> for OptionUnion<T> {
+  fn some(move item: T) -> Self {OptionUnion::Some(item)}
+  fn none() -> Self {OptionUnion::None(void)}
+  fn is_some(ref self) -> bool {
+    match self {
+      OptionUnion::Some(_) => true,
+      _ => false
+    }
+  }
+}
